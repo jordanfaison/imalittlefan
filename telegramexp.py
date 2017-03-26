@@ -116,25 +116,25 @@ def on_msg_receive(msg):
 				pwm.stop()
 				GPIO.cleanup()
 				return;
-			elif (mystr == '!photo'):
+			###elif (mystr == '!photo'):
 				
-				path=os.getenv("HOME")
-				pwm.start(12
-				with picamera.PiCamera() as picam:
-					picam.led = False
-					picam.rotation=90
-					picam.framerate = 24
-					picam.start_preview()
-					picam.annotate_background = picamera.Color('black')
-					picam.annotate_text = dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-					picam.capture(path+'/pic.jpg',resize=(640,480))
-					time.sleep(2)
-					picam.stop_preview()
-					picam.close()
-				print(path)	
-				peer.send_photo ('/root/pic.jpg')
-				peer.send_msg ('Send the picture may take some time.\nPlease wait...')
-				return;
+			#	path=os.getenv("HOME")
+			#	pwm.start(12
+			#	with picamera.PiCamera() as picam:
+			#		picam.led = False
+			#		picam.rotation=90
+			#		picam.framerate = 24
+			#		picam.start_preview()
+			#		picam.annotate_background = picamera.Color('black')
+			#		picam.annotate_text = dt.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+			#		picam.capture(path+'/pic.jpg',resize=(640,480))
+			#		time.sleep(2)
+			#		picam.stop_preview()
+			#		picam.close()
+			#	print(path)	
+			#	peer.send_photo ('/root/pic.jpg')
+			#	peer.send_msg ('Send the picture may take some time.\nPlease wait...')
+			#	return;
 				
 			elif (mystr == 'id'):
 				iid = 'Your telegram id : '+str(msg.src.id)
