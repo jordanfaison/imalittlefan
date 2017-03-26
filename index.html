@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Full Width Pics - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/full-width-pics.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Width Image Header with Logo -->
+    <!-- Image backgrounds are set within the full-width-pics.css file. -->
+    <header class="image-bg-fluid-height">
+        <img class="img-responsive img-center" src="images/Ima little fan.png" alt="">
+    </header>
+
+    <!-- Content Section -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="section-heading">Here's The Whole Story:</h1>
+                    <p class="lead section-lead">What it does</p>
+                    <p class="section-paragraph">The original plan was to use an Google home to Issue commands to a raspberry pi that would then control different devices that use Infer Red signal, in our case, the Dyson fan. We used the IR blaster, and sensor to create a project that would allow us to generate "widgets" for multi-device integration, would have been achieved by having a python "learn" script that would generate a list of codes and assign a integer to those codes. Once the new code was assigned, it would append that to the .php of the web app that would allow us to set an icon and name for each code. we had all the parts near complete and bad news. everything went south when our IR sensor stopped working. So it only made sense to go for gold! Hack our way the only way we knew how.. a few cheat codes later, a bit of 3D printing, some pixie dust, some hair pulling, and almost giving up on the whole idea, Blamo. We did a thing. This thing allows us to do just as we initially hoped, but just cut some fat along the edges. So now what it does it uses the google Home to send a text message to telegram via IFTTT which the pi is constantly listening to, the pi interprets these messages and does functions depending on what it sees, from there the pi makes the decisions , turn on a servo motor to press the power on the remote controller that came with the Dyson fan. This was achieved by 3D printing a arm that is lined up the remote and is actuated by the servo, turning the fan on. its clunky and has alot of latency, but it is more "inefficient",sarcasm, and that was the goal. why do all the work when technology can do it for you. Benefit of having the telegram bot is now i can text any device I connect to this pi from any device I own what I want to do including the google home. Which makes this project extremely modular and very straight forward.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fixed Height Image Aside -->
+    <!-- Image backgrounds are set within the full-width-pics.css file. -->
+    <aside class="image-bg-fixed-height"></aside>
+
+    <!-- Content Section -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="section-heading">The Good & The Bad</h1>
+                    <p class="lead section-lead">and everything that comes with it</p>
+                    <p class="section-paragraph">Accomplishments that we're proud of
+
+completing the project after hours of disappointing failure,
+
+What we learned
+
+That things only seem worse... and than you throw something together last minute because you spent 20 hours trying to get the broke thing to work... but it all works out for the best... or not, we'll see how the presentation goes.
+
+What's next for imalittlefan
+
+Maybe a moderate sized fan, I mean I don't l know, kind of in a transition phase in my life, probably just ride the wave of life and see where it takes me. Hope to have a whole family of fans of my own some day.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; Imalittlefan.com 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
