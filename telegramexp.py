@@ -11,6 +11,7 @@ import datetime as dt
 import tgl
 import sys 
 import RPi.GPIO as GPIO
+
 from functools import partial
 
 ppth = os.path.abspath(__file__)
@@ -18,7 +19,8 @@ print ppth
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
-GPIO.setup(27,GPIO.OUT)
+GPIO.setup(27, GPIO.OUT)
+
 #
 our_id = 0
 binlog_done = False;
@@ -102,13 +104,25 @@ def on_msg_receive(msg):
 			if (mystr=='about'):
 				peer.send_msg ('Telegram bot v0.1b\n\nProgrammer: @RaminSangesari\nEmail: r_sangsari@yahoo.ca')
 				return;
-				
+			elif (mystr == '!on'):
+				#servo setup
+				GPIO.setmode(GPIO.BOARD)
+				GPIO.setup(11, GPIO.OUT)
+				pwm = GPIO.PWM(11, 50)
+				pwm.start(12)
+				time.sleep(1)
+				pwm.ChangeDutyCycle(10)
+				time.sleep(1)
+				pwm.stop()
+				GPIO.cleanup()
+				return;
 			elif (mystr == '!photo'):
 				
 				path=os.getenv("HOME")
+				pwm.start(12
 				with picamera.PiCamera() as picam:
-					#picam.led = False
-					#picam.rotation=90
+					picam.led = False
+					picam.rotation=90
 					picam.framerate = 24
 					picam.start_preview()
 					picam.annotate_background = picamera.Color('black')
