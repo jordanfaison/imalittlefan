@@ -63,7 +63,7 @@ def on_msg_receive(msg):
 	peer = msg.src
 	mystr = msg.text.lower()
 	w = mystr.split()
-	if (msg.src.id == 97329959):#ADMIN ID
+	if (msg.src.id == 307932561):#ADMIN ID via bot
 		if (mystr =='dison'):
 			enable_bot = True
 			peer.send_msg ('Program is Disable.')
